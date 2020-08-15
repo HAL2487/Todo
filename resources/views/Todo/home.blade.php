@@ -4,29 +4,27 @@
     <meta charset="utf-8">
     <title>Todoアプリ</title>
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     
 </head>
     <body>
         <form action="/todo/register" method="post">
             <!--actionで指定して右記を見に行く　Route::get('/tweets', 'TweetController@index');-->
                 {!! csrf_field() !!}
-            <div class="form-group row">
-                <label class="col-xs-2 col-form-label">TaskTitle</label>
-                <div class="col-xs-10">
-                    <input type="text" name="body" class="form-control" placeholder="Task内容を入力してください。"/>
-                    <input type="text" id="datepicker">
-                    <div id="outarea_aa">outarea_aa</div>
+            <div class="a">
+                <div class="wrap">
+                    <p id="headline">タスク登録</p>
+                    <label for="name1">タイトル</label>
+                        <input type="text" name="body" class="form-control" placeholder="タスクタイトルを入力してください。"/>
+                    <label for="name1">内容</label>
+                        <textarea class="form-control" id="taskdetail" name="comment" placeholder="タスク内容を入力してください。"></textarea>
+                    <label for="name1">期限</label>
+                        <input type="date" class="form-control">
                 </div>
-            </div>
-
-            <div class="form-group row">
-                <div class="col-xs-offset-2 col-xs-10">
-                    <button type="submit" class="btn btn-primary">登録</button>
+                <div class="b">
+                    <button type="submit" class="form-btn">登録</button>
+                    <input type="reset" class="form-btn" value="リセット">
                 </div>
             </div>
         </form>
-        <script src="{{ asset('/js/test.js') }}"></script>
     </body>
 </html>
