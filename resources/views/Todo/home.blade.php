@@ -8,7 +8,7 @@
 </head>
     <body>
         <form action="/todo/register" method="post">
-            <!--actionで指定して右記を見に行く　Route::get('/tweets', 'TweetController@index');-->
+            <!--actionで指定して右記を見に行く　Route::get('/todo/register', 'TaskController@register');-->
                 {!! csrf_field() !!}
             <div class="a">
                 <div class="wrap">
