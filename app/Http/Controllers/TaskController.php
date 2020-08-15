@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use  App\Tasklist;
 
 class TaskController extends Controller
 {
@@ -24,10 +25,28 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function register()
+    public function register(Request $request)
     {
-       return view('Todo.details');
+        $taskdetail = new Tasklist;
+
+        $taskdetail->title = $request->input('title');
+        $taskdetail->content = $request->input('content');
+        $taskdetail->due_date = $request->input('due_date');
+        
+        $taskdetail->save();
+        
+        return redirect('/tasklist');
     }
+
+    public function test(Request $request)
+    {
+        $tasklist = Tasklist::all();
+        return view('Todo.tasklist',[
+            'tasklist' => $tasklist,
+        ]);
+    }
+
+
 
     /**
      * Store a newly created resource in storage.

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Todoアプリ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     
 </head>
@@ -14,11 +15,11 @@
                 <div class="wrap">
                     <p id="headline">タスク登録</p>
                     <label for="name1">タイトル</label>
-                        <input type="text" name="body" class="form-control" placeholder="タスクタイトルを入力してください。"/>
-                    <label for="name1">内容</label>
-                        <textarea class="form-control" id="taskdetail" name="comment" placeholder="タスク内容を入力してください。"></textarea>
-                    <label for="name1">期限</label>
-                        <input type="date" class="form-control">
+                        <input type="text" name="title" class="form-control" placeholder="タスクタイトルを入力してください。"/>
+                    <label for="content">内容</label>
+                        <textarea class="form-control" id="content" name="content" placeholder="タスク内容を入力してください。"></textarea>
+                    <label for="due_date">期限</label>
+                        <input type="text" name="due_date" id ="due_date" class="form-control">
                 </div>
                 <div class="b">
                     <button type="submit" class="form-btn">登録</button>
@@ -26,5 +27,14 @@
                 </div>
             </div>
         </form>
+        <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+        <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
+        <script>
+        flatpickr(document.getElementById('due_date'), {
+            locale: 'ja',
+            dateFormat: "Y/m/d",
+            minDate: new Date()
+        });
+        </script>
     </body>
 </html>
