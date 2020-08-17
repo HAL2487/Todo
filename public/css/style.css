@@ -2,12 +2,10 @@ body {
   font-family: arial, sans-serif;
 }
 
-
 .a {
   margin: 0 auto;
   width: 500px;
 }
-
 
 .wrap {
   display:flex;
@@ -37,6 +35,7 @@ body {
 
 
 .form-control {
+  height: 30px;
   margin-bottom: 15px;
   border: solid 1px #c0c0c0;
   border-radius: 3px;
@@ -51,5 +50,6 @@ body {
   margin: 0 auto;
 }
 
-
-
+.btnupdate {
+  margin-top:20px;
+}

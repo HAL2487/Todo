@@ -32,5 +32,7 @@ Route::post('/todo/register', 'TaskController@register');
 
 Route::get('/tasklist', 'TaskController@test');
 
+Route::get('/tasklist/{id}', 'TaskController@show');
+
 
 

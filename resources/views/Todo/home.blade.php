@@ -14,7 +14,7 @@
             <div class="a">
                 <div class="wrap">
                     <p id="headline">タスク登録</p>
-                    <label for="name1">タイトル</label>
+                    <label for="title">タイトル</label>
                         <input type="text" name="title" class="form-control" placeholder="タスクタイトルを入力してください。"/>
                     <label for="content">内容</label>
                         <textarea class="form-control" id="content" name="content" placeholder="タスク内容を入力してください。"></textarea>
