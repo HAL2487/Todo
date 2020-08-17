@@ -11,15 +11,20 @@
         <h1>タスク詳細</h1>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <h3>タスクID</h3>
-            <p>{{ $tasklist->id }}</p>
-            <h3>タイトル</h3>
-            <p>{{ $tasklist->content }}</p>
-            <h3>登録日時</h3>
-            <p>{{ $tasklist->created_at }}</p>
-            <h3>更新日時</h3>
-            <p>{{ $tasklist->updated_at }}</p>
+        <div class="tasklists">
+            <dl>
+                <dt>タスクID</dt>
+                <dd>{{ $tasklist->id }}</dd>
+                
+                <dt>タイトル</dt>
+                <dd>{{ $tasklist->content }}</dd>
+
+                <dt>登録日時</dt>
+                <dd>{{ $tasklist->created_at }}</dd>
+
+                <dt>更新日時</dt>
+                <dd>{{ $tasklist->updated_at }}</dd>
+            <dl>
         </div>
     </div>
     <a href="" class="btn btn-primary">更新</a>
