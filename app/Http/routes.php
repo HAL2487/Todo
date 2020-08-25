@@ -34,5 +34,7 @@ Route::get('/tasklist', 'TaskController@test');
 
 Route::get('/tasklist/{id}', 'TaskController@show');
 
+Route::get('/tasklist/{id}/edit', 'TaskController@edit');
+
 
 

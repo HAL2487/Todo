@@ -82,7 +82,11 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tasklist = Tasklist::find($id);
+        
+        return view('Todo.edit',[
+            'tasklist' => $tasklist
+        ]);
     }
 
     /**

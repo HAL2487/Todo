@@ -13,7 +13,7 @@
                 {!! csrf_field() !!}
             <div class="a">
                 <div class="wrap">
-                    <p id="headline">タスク登録</p>
+                    <h1>タスク登録</h1>
                     <label for="title">タイトル</label>
                         <input type="text" name="title" class="form-control" placeholder="タスクタイトルを入力してください。"/>
                     <label for="content">内容</label>

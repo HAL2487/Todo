@@ -29,7 +29,7 @@
                     <tr>
                         <td id="taskid">{{ $tasklist -> id }}</td>
                         <td id="title">{{ $tasklist -> title }}</td>
-                        <td id="title">{{ $tasklist -> updated_at }}</td>
+                        <td id="taskContent">{{ $tasklist -> content }}</td>
                         <td class="text-right"><a href="/tasklist/{{ $tasklist-> id }}">詳細</a></td>
                     </tr>
                 @endforeach
