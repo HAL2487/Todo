@@ -12,7 +12,8 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form action="/todo/register" method="post">
+            <form action="/tasklist/{{ $tasklist->id }}" method="post">
+                <input type="hidden" name="_method" value="PUT">
                 {!! csrf_field() !!}
 
                 <div class="form-group row">

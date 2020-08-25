@@ -36,5 +36,9 @@ Route::get('/tasklist/{id}', 'TaskController@show');
 
 Route::get('/tasklist/{id}/edit', 'TaskController@edit');
 
+Route::put('/tasklist/{id}', 'TaskController@update');
+
+Route::delete('/tasklist/{id}', 'TaskController@destroy');
+
 
 

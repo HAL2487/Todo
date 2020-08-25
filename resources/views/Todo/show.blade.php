@@ -23,8 +23,8 @@
                 <dd>{{ $tasklist->updated_at }}</dd>
             <dl>
         </div>
-    <a href="/tasklist/{id}/edit" class="btn btn-primary">更新</a>
-    <form action="" method="post">
+    <a href="/tasklist/{{ $tasklist->id }}/edit" class="btn btn-primary">更新</a>
+    <form action="/tasklist/{{ $tasklist->id }}" method="post">
         <input type="hidden" name="_method" value="DELETE">
         {!! csrf_field() !!}
         <button type="submit" class="btn btn-danger">削除</button>
