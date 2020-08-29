@@ -29,5 +29,14 @@ Route::put('/tasklist/{id}', 'TaskController@update');
 
 Route::delete('/tasklist/{id}', 'TaskController@destroy');
 
+// 認証のルート定義…
+Route::get('auth/login', 'Auth\AuthController@getLogin')->name('auth.getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin')->name('auth.postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout')->name('auth.getLogout');
+
+// 登録のルート定義…
+Route::get('auth/register', 'Auth\AuthController@getRegister')->name('auth.getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister')->name('auth.postRegister');
+
 
 
