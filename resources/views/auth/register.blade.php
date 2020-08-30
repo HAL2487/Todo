@@ -1,10 +1,4 @@
-@extends('layouts.default')
 
-@section('page-title')
-    ログイン
-@endsection
-
-@section('content')
 
 <form method="POST" action="/auth/register">
     {!! csrf_field() !!}
@@ -34,4 +28,3 @@
     </div>
 </form>
 
-@endsection

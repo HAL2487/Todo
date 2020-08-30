@@ -5,7 +5,6 @@
     <title>Todoアプリ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    
 </head>
     <body>
         <form action="/todo/register" method="post">
@@ -14,6 +13,7 @@
             <div class="a">
                 <div class="wrap">
                     <h1>タスク登録</h1>
+                    <hr>
                     <label for="title">タイトル</label>
                         <input type="text" name="title" class="form-control" placeholder="タスクタイトルを入力してください。"/>
                     <label for="content">内容</label>
