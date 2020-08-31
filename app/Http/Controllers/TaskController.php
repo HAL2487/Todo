@@ -107,6 +107,7 @@ class TaskController extends Controller
     public function update(Request $request, $id)
     {
         $tasklist = Tasklist::find($id);
+        $tasklist->title = $request->input('title');
         $tasklist->content = $request->input('body');
         $tasklist->save();
 
