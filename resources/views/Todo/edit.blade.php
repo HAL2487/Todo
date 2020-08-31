@@ -14,6 +14,8 @@
         <input type="hidden" name="_method" value="PUT">
         {!! csrf_field() !!}
             <div class="task_content">
+                <label>タスクタイトル</label>
+                <input type="text" name="title" class="form-control" placeholder="タスクタイトルを入力してください。" value="{{ $tasklist->title }} "/>
                 <label>タスク内容</label>
                 <input type="text" name="body" class="form-control" placeholder="タスク内容を入力してください。" value="{{ $tasklist->content }} "/>
             </div>

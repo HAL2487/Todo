@@ -8,6 +8,10 @@ body {
   margin: 0 auto;
 }
 
+.error_messagearea {
+  background: #fbe2e5;
+}
+
 .wrap {
   display:flex;
   flex-flow: column;

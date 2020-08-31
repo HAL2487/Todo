@@ -9,20 +9,21 @@
 
 @section('content')
 
-@if(count($errors) > 0)
-    <ul>
-        @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-        <!--$errorsは特別なフラッシュデータ(1回限りのセッション変数)でエラーメッセージが入り自動的にviewmに渡される -->
-    </ul>
-@endif
-
 <form action="/todo/register" method="post">
     <!--actionで指定して右記を見に行く　Route::get('/todo/register', 'TaskController@register');-->
     {!! csrf_field() !!}
     <!--LaravelはデフォルトでCSRF対策を行っている。フォームにCSRFトークンを埋め込むことで自サイト以外からのリクエストを弾く仕組みになっている-->
     <div class="container">
+        <div class="error_messagearea">
+            @if(count($errors) > 0)
+            <ul>
+                @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+                <!--$errorsは特別なフラッシュデータ(1回限りのセッション変数)でエラーメッセージが入り自動的にviewに渡される -->
+            </ul>
+            @endif
+        </div>
         <div class="wrap">
             <h1>タスク登録</h1>
             <hr>
