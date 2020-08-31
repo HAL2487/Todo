@@ -8,19 +8,31 @@
 @endsection
 
 @section('content')
+
+@if(count($errors) > 0)
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+        <!--$errorsは特別なフラッシュデータ(1回限りのセッション変数)でエラーメッセージが入り自動的にviewmに渡される -->
+    </ul>
+@endif
+
 <form action="/todo/register" method="post">
     <!--actionで指定して右記を見に行く　Route::get('/todo/register', 'TaskController@register');-->
     {!! csrf_field() !!}
+    <!--LaravelはデフォルトでCSRF対策を行っている。フォームにCSRFトークンを埋め込むことで自サイト以外からのリクエストを弾く仕組みになっている-->
     <div class="container">
         <div class="wrap">
             <h1>タスク登録</h1>
             <hr>
             <label for="title">タイトル</label>
-                <input type="text" name="title" class="form-control" placeholder="タスクタイトルを入力してください。"/>
+                <input type="text" name="title" class="form-control" placeholder="タスクタイトルを入力してください。" value="{{ old('title')}}"/>
+                 <!--'_old_input'も特別なフラッシュデータでoldメソッドによって直前の画面入力パラメータを取り出せる -->
             <label for="content">内容</label>
-                <textarea class="form-control" id="content" name="content" placeholder="タスク内容を入力してください。"></textarea>
+                <textarea class="form-control" id="content" name="content" placeholder="タスク内容を入力してください。" value="{{ old('content')}}"></textarea>
             <label for="due_date">期限</label>
-                <input type="text" name="due_date" id ="due_date" class="form-control">
+                <input type="text" name="due_date" id ="due_date" class="form-control" value="{{ old('due_date')}}">
         </div>
         <div class="operation_btn">
             <button type="submit" class="registration_btn">登録</button>

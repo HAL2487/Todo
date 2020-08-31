@@ -32,9 +32,9 @@ class AuthController extends Controller
     {
         $this->middleware('guest', ['except' => 'getLogout']);
 
-        $this->redirectPath = route('/todo/home');
-        $this->loginPath = route('/todo/home');
-        $this->redirectAfterLogout = route('todo/home');
+        $this->redirectPath = route('/tasklist');
+        $this->loginPath = route('/tasklist');
+        $this->redirectAfterLogout = route('auth/login');
 
     }
 

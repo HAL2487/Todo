@@ -27,6 +27,12 @@ class TaskController extends Controller
      */
     public function register(Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required|string|max:100',
+            'content' => 'required|string|max:255',
+            'due_date' => 'required|date',
+        ]);
+
         $taskdetail = new Tasklist;
         //Eloquent(ORM)オブジェクトを作成
 
@@ -39,7 +45,7 @@ class TaskController extends Controller
         return redirect('/tasklist');
     }
 
-    public function test(Request $request)
+    public function reference(Request $request)
     {
         $tasklist = Tasklist::all();
         //Eloquent(ORM)オブジェクトを作成してレコードを全件取得
