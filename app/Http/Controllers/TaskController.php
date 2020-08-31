@@ -28,6 +28,7 @@ class TaskController extends Controller
     public function register(Request $request)
     {
         $taskdetail = new Tasklist;
+        //Eloquent(ORM)オブジェクトを作成
 
         $taskdetail->title = $request->input('title');
         $taskdetail->content = $request->input('content');
@@ -41,6 +42,7 @@ class TaskController extends Controller
     public function test(Request $request)
     {
         $tasklist = Tasklist::all();
+        //Eloquent(ORM)オブジェクトを作成してレコードを全件取得
         return view('Todo.tasklist',[
             'tasklist' => $tasklist,
         ]);

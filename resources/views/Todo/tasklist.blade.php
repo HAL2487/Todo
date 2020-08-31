@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-    <title>Todo</title>
-    <link rel="stylesheet" href="{{ asset('/css/tasklist.css') }}">
-</head>
-<body>
-    <div class="container">
+@extends('layouts.app')
+
+@section('page-title','Todo | タスク一覧')
+
+@section('css')
+<link rel="stylesheet" href="{{ asset('/css/tasklist.css') }}">
+@endsection
+
+@section('content')
+<div class="container">
         <h1 id="task_list_title">タスク一覧</h1>
         <table class="task_list_table">
             <tbody>
@@ -15,7 +16,7 @@
                         <td>タスクID</td>
                         <td>タイトル</td>
                         <td>内容</td>
-                        <td colspan = 2>Actions</td>
+                        <td>Actions</td>
                     </tr>
                 </thead>
                 @foreach($tasklist as $tasklist)
@@ -30,5 +31,6 @@
         </table>
         <a class="new_addition" href="/todo/registration">新規追加</a>
     </div>
-</body>
-</html>
+@endsection
+
+
