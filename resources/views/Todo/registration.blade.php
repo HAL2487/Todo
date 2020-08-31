@@ -2,15 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>Todoアプリ</title>
+    <title>Todo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 </head>
     <body>
         <form action="/todo/register" method="post">
             <!--actionで指定して右記を見に行く　Route::get('/todo/register', 'TaskController@register');-->
-                {!! csrf_field() !!}
-            <div class="a">
+            {!! csrf_field() !!}
+            <div class="container">
                 <div class="wrap">
                     <h1>タスク登録</h1>
                     <hr>
@@ -21,9 +21,10 @@
                     <label for="due_date">期限</label>
                         <input type="text" name="due_date" id ="due_date" class="form-control">
                 </div>
-                <div class="b">
-                    <button type="submit" class="form-btn">登録</button>
-                    <input type="reset" class="form-btn" value="リセット">
+                <div class="operation_btn">
+                    <button type="submit" class="registration_btn">登録</button>
+                    <input type="reset" class="reset_button" value="リセット">
+                    <a href="/tasklist" class="task_list_btn">タスク一覧</a>
                 </div>
             </div>
         </form>

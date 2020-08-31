@@ -8,32 +8,35 @@ body {
     margin: 0 auto;
 }
 
-.buttons {
+.operation_btn {
     display: flex;
     margin-top: 50px;
 }
 
-.updatebtn {
+.update_btn {
     display: inline-block;
     text-align: center;
+    text-decoration: none;
+    background: #3282b8;
+    color: white;
     font-size: 1rem;
     width: 90px;
     height: 40px;
     line-height: 40px;
     border: none;
-    text-decoration: none;
     margin-right: 20px;
-    background: #3282b8;
+    border-radius: 3px;
 }
 
-.deletebtn {
+.delete_btn {
     display: inline-block;
+    background: #3282b8;
+    color: white;
     font-size: 1rem;
     width: 90px;
     height: 40px;
     border: none;
-    background: #3282b8;
-    color: white;
+    border-radius: 3px;
 }
 
 .updatebtn:visited {

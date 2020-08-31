@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todo/home', 'TaskController@index');
+Route::get('/todo/registration', 'TaskController@index');
 
 Route::post('/todo/register', 'TaskController@register');
 

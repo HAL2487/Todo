@@ -3,9 +3,9 @@ body {
   color: #30332E;
 }
 
-.a {
+.container {
+  width: 600px;
   margin: 0 auto;
-  width: 500px;
 }
 
 .wrap {
@@ -19,19 +19,46 @@ body {
   height: 150px;
 }
 
-
-.b {
+.operation_btn {
   margin-top: 20px;
+  display: flex;
 }
 
-.form-btn {
+.registration_btn {
   background: #3282b8;
+  font-size: 1rem;
   color: #FFF;
   border:none;
   border-radius: 3px;
   margin-right: 10px;
   width: 100px;
   height: 40px;
+}
+
+.reset_button {
+  background: #3282b8;
+  font-size: 1rem;
+  color: #FFF;
+  border:none;
+  border-radius: 3px;
+  margin-right: 10px;
+  width: 100px;
+  height: 40px;
+}
+
+.task_list_btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background: #3282b8;
+  font-size: 1rem;
+  color: #FFF;
+  border-radius: 3px;
+  margin-right: 10px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+
 }
 
 .form-control {
@@ -43,4 +70,19 @@ body {
 
 .f-container {
   display: flex;
+}
+
+.updatebtn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background: #3282b8;
+  color: white;
+  font-size: 1rem;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  margin-right: 20px;
+  border-radius: 3px;
 }
