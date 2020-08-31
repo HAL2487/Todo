@@ -17,7 +17,7 @@
                 <label>タスクタイトル</label>
                 <input type="text" name="title" class="form-control" placeholder="タスクタイトルを入力してください。" value="{{ $tasklist->title }} "/>
                 <label>タスク内容</label>
-                <input type="text" name="body" class="form-control" placeholder="タスク内容を入力してください。" value="{{ $tasklist->content }} "/>
+                <input type="text" name="content" class="form-control" placeholder="タスク内容を入力してください。" value="{{ $tasklist->content }} "/>
             </div>
         <div class="operation_btn">
             <button type="submit" class="update_btn">更新</button>

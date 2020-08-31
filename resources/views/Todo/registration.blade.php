@@ -4,11 +4,9 @@
 
 @section('css')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 @endsection
 
 @section('content')
-
 <form action="/todo/register" method="post">
     <!--actionで指定して右記を見に行く　Route::get('/todo/register', 'TaskController@register');-->
     {!! csrf_field() !!}
@@ -38,7 +36,6 @@
         <div class="operation_btn">
             <button type="submit" class="registration_btn">登録</button>
             <input type="reset" class="reset_button" value="リセット">
-            <a href="/tasklist" class="task_list_btn">タスク一覧</a>
         </div>
     </div>
 </form>

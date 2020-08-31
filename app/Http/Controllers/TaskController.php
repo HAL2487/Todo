@@ -108,7 +108,7 @@ class TaskController extends Controller
     {
         $tasklist = Tasklist::find($id);
         $tasklist->title = $request->input('title');
-        $tasklist->content = $request->input('body');
+        $tasklist->content = $request->input('content');
         $tasklist->save();
 
         return redirect('/tasklist');

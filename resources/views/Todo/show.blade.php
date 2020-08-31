@@ -7,6 +7,7 @@
 @endsection
 
 @section('content')
+
 <div class="container">
         <h1>タスク詳細</h1>
         <hr>
