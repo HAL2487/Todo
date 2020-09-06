@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-        <h2 id="task_list_title">タスク一覧</h2>
+        <h1 id="task_list_title">タスク一覧</h1>
             <table class="task_list_table">
                 <tbody>
                     <thead>

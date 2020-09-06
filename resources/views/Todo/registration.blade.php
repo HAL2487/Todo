@@ -3,6 +3,7 @@
 @section('page-title','Todo | タスク登録')
 
 @section('css')
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 @endsection
 
@@ -41,13 +42,74 @@
 </form>
 <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
 <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
-<script>
+<script type="text/javascript">
 flatpickr(document.getElementById('due_date'), {
     locale: 'ja',
     dateFormat: "Y/m/d",
     minDate: new Date()
 });
+
+//必須項目が入力されていない場合に登録ボタンを無効化し、入力された場合のみ有効とする
+
+function  changeButton(){
+    $(function() {
+    //登録ボタンとリセットボタンを無効化してボタン色を変更
+        $('.registration_btn,.reset_button').prop("disabled", true);
+    });
+    $('.registration_btn,.reset_button').css({
+    'background':'#d6e0f0'
+    });
+}
+
+$('.form-control').change(function () {
+    let regist_flag = true;
+    let reset_flag = true;
+    //必須項目が空かどうかをチェック
+    $('.form-control').each(function(e) {
+        if ($('.form-control').eq(e).val() === "") {
+            regist_flag = false;
+            reset_flag = false;
+        }
+    });
+
+    //全て埋まっていたら
+    if (regist_flag) {
+        //登録ボタンを復活
+        $('.registration_btn').prop("disabled", false);
+        $('.registration_btn').css({
+            'background':'#197163'
+        });
+    }
+    else {
+        //登録ボタンを閉じる
+        $('.registration_btn').prop("disabled", true);
+        $('.registration_btn').css({
+            'background':'#d6e0f0'
+        });
+    }
+
+    if (reset_flag) {
+        //登録ボタンを復活
+        $('.reset_button').prop("disabled", false);
+        $('.reset_button').css({
+            'background':'#197163'
+        });
+    }
+    else {
+        //登録ボタンを閉じる
+        $('.reset_button').prop("disabled", true);
+        $('.reset_button').css({
+            'background':'#d6e0f0'
+        });
+    }
+ });
+
+ $('.reset_button').on('click', function(){
+    changeButton();
+ });
 </script>
+
+
 @endsection
    
 

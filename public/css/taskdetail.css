@@ -6,6 +6,7 @@ body {
 .container {
     width: 600px;
     margin: 0 auto;
+    position: relative;
 }
 
 .operation_btn {
